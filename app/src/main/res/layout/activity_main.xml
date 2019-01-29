@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:text="@font/centurybold"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <!--<VideoView-->
+        <!--android:id="@+id/bgVideoView"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentRight="true" />-->
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="272dp"
+            android:layout_height="273dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:maxWidth="500dp"
+            android:maxHeight="180dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/geekwars" />
+
+        <!--<Button-->
+        <!--android:id="@+id/btSignIn"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_above="@+id/btSignUp"-->
+        <!--android:layout_marginLeft="50dp"-->
+        <!--android:layout_marginRight="50dp"-->
+        <!--android:layout_marginBottom="10dp"-->
+        <!--android:adjustViewBounds="true"-->
+        <!--android:background="@color/colorDarkCyan"-->
+        <!--android:fontFamily="@font/centurybold"-->
+        <!--android:scaleType="fitXY"-->
+        <!--android:text="@string/in"-->
+        <!--android:textColor="@color/black" />-->
+
+        <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_marginLeft="40dp"-->
+        <!--android:layout_marginRight="40dp">-->
+
+        <!--<EditText-->
+        <!--android:id="@+id/txtemail"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:backgroundTint="@color/white"-->
+        <!--android:fontFamily="sans-serif-light"-->
+        <!--android:hint="@string/mail"-->
+        <!--android:autofillHints="@string/mail"-->
+        <!--android:inputType="textEmailAddress"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textColorHint="@color/white"-->
+        <!--android:adjustViewBounds="true"-->
+        <!--android:scaleType="fitXY"-->
+        <!--android:textSize="17sp" />-->
+
+        <!--<EditText-->
+        <!--android:id="@+id/txtpassword"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/txtemail"-->
+        <!--android:layout_marginTop="30dp"-->
+        <!--android:backgroundTint="@color/white"-->
+        <!--android:fontFamily="sans-serif-light"-->
+        <!--android:hint="@string/pass"-->
+        <!--android:autofillHints="@string/pass"-->
+        <!--android:inputType="textPassword"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textColorHint="@color/white"-->
+        <!--android:adjustViewBounds="true"-->
+        <!--android:scaleType="fitXY"-->
+        <!--android:textSize="17sp" />-->
+        <!--</RelativeLayout>-->
+
+        <!--<Button-->
+        <!--android:id="@+id/btSignUp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_marginBottom="20dp"-->
+        <!--android:layout_marginLeft="50dp"-->
+        <!--android:layout_marginRight="50dp"-->
+        <!--android:adjustViewBounds="true"-->
+        <!--android:scaleType="fitXY"-->
+        <!--android:background="@color/colorDarkGreen"-->
+        <!--android:fontFamily="@font/centurybold"-->
+        <!--android:text="@string/reg"-->
+        <!--android:textColor="@color/white" />-->
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/signInButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/progressBar"
+            android:layout_centerVertical="true" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1079226378967",
+    "firebase_url": "https://geekwars-d935a.firebaseio.com",
+    "project_id": "geekwars-d935a",
+    "storage_bucket": "geekwars-d935a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1079226378967:android:3a7708b995a12d40",
+        "android_client_info": {
+          "package_name": "com.hugo.geekwars"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1079226378967-q3hve14l92c66qrp0rg8c0k8sktbo9be.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hugo.geekwars",
+            "certificate_hash": "3a4b27eed061ea279585d682e28755a1e2123080"
+          }
+        },
+        {
+          "client_id": "1079226378967-fkrrs2aas2plkldj90ehdp2f8vo7jvj1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcyA995ABVxcXBwVYS0G-XibKLGH8HqyY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1079226378967-fkrrs2aas2plkldj90ehdp2f8vo7jvj1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

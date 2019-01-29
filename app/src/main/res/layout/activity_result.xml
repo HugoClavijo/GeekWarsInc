@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ResultActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:padding="16dp"
+            android:textColor="#fff"
+            android:fontFamily="@font/centurybold"
+            android:layout_margin="16dp"
+            android:id="@+id/grade"
+            android:text="Go over your notes"/>
+
+        <TextView
+            android:layout_below="@+id/grade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:padding="16dp"
+            android:textColor="#fff"
+            android:layout_margin="16dp"
+            android:fontFamily="@font/centurybold"
+            android:id="@+id/outOf"
+            android:text="You scored 0 out of 0"/>
+
+        <Button
+            android:layout_below="@+id/outOf"
+            android:id="@+id/retry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ranking"
+            android:padding="10dp"
+            android:layout_margin="8dp"
+            android:textColor="#fff"
+            android:background="#4CAF50"
+            android:textSize="18sp"
+            android:fontFamily="@font/centurybold"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+
+</ScrollView>
