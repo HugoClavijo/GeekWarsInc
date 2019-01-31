@@ -73,6 +73,7 @@ public class ProfileActivity extends AppCompatActivity implements GoogleApiClien
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(ProfileActivity.this, Main2Activity.class));
+                ProfileActivity.this.finish();
             }
         });
 
@@ -107,6 +108,7 @@ public class ProfileActivity extends AppCompatActivity implements GoogleApiClien
             public void onResult(@NonNull Status status) {
                 if (status.isSuccess()) {
                     goLogInScreen();
+                    finish();
                 } else {
                     Toast.makeText(getApplicationContext(), R.string.not_close_session, Toast.LENGTH_SHORT).show();
                 }

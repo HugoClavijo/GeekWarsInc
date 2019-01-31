@@ -40,7 +40,7 @@ public class GameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
-        new JsonTask().execute("https://geekwars-d935a.firebaseio.com/.json");
+        new JsonTask().execute("https://geekwars-d935a.firebaseio.com/quiz/.json");
 
 
         mScoreView = (TextView)findViewById(R.id.score);
@@ -240,6 +240,7 @@ public class GameActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     startActivity(new Intent(GameActivity.this, Main2Activity.class));
+                    GameActivity.this.finish();
                 }
             });
 
