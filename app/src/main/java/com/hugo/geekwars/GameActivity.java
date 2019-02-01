@@ -40,15 +40,14 @@ public class GameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
-        new JsonTask().execute("https://geekwars-d935a.firebaseio.com/quiz/.json");
-
-
         mScoreView = (TextView)findViewById(R.id.score);
         mQuestionView = (TextView)findViewById(R.id.question);
         mButtonChoice1 = (Button)findViewById(R.id.choice1);
         mButtonChoice2 = (Button)findViewById(R.id.choice2);
         mButtonChoice3 = (Button)findViewById(R.id.choice3);
         mButtonExit = (Button)findViewById(R.id.quit);
+
+        new JsonTask().execute("https://geekwars-d935a.firebaseio.com/quiz/.json");
 
     }
 
@@ -66,6 +65,8 @@ public class GameActivity extends AppCompatActivity {
 
         private String answersRef []= new String[4];
 
+        private String mUser, mUserId;
+
         protected void onPreExecute() {
             super.onPreExecute();
 
@@ -74,6 +75,9 @@ public class GameActivity extends AppCompatActivity {
             pd.setCancelable(false);
             pd.show();
 
+            Bundle bundle = getIntent().getExtras();
+            mUser = bundle.getString("userName");
+            mUserId = bundle.getString("userId");
         }
 
         protected String doInBackground(String... params) {
@@ -271,6 +275,8 @@ public class GameActivity extends AppCompatActivity {
             if (mQuestionNumber == QuestionLibrary.numQuestions) {
                 Intent i = new Intent(GameActivity.this, ResultActivity.class);
                 Bundle bundle = new Bundle();
+                bundle.putString("userName", mUser);
+                bundle.putString("userId", mUserId);
                 bundle.putInt("finalScore", mScore);
                 i.putExtras(bundle);
                 GameActivity.this.finish();

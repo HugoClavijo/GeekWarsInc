@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".RankingActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:padding="16dp"
+            android:textColor="#fff"
+            android:fontFamily="@font/centurybold"
+            android:layout_margin="16dp"
+            android:id="@+id/grade"
+            android:text="Top Scores"/>
+
+        <TextView
+            android:layout_below="@+id/grade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:padding="16dp"
+            android:textColor="#fff"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/centurybold"
+            android:id="@+id/top1"
+            android:text="------------------------"/>
+
+        <TextView
+            android:layout_below="@+id/top1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:padding="16dp"
+            android:textColor="#fff"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/centurybold"
+            android:id="@+id/top2"
+            android:text="------------------------"/>
+
+        <TextView
+            android:layout_below="@+id/top2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:padding="16dp"
+            android:textColor="#fff"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/centurybold"
+            android:id="@+id/top3"
+            android:text="------------------------"/>
+
+
+        <Button
+            android:id="@+id/quit"
+            android:layout_below="@+id/top3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salir"
+            android:padding="10dp"
+            android:layout_margin="16dp"
+            android:textColor="#fff"
+            android:background="@color/colorRed"
+            android:textSize="18sp"
+            android:fontFamily="@font/centurybold"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    <!--<Button-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Salir"-->
+        <!--android:background="@color/colorRed"-->
+        <!--android:textColor="#fff"-->
+        <!--android:padding="8dp"-->
+        <!--android:layout_marginBottom="24dp"-->
+        <!--android:fontFamily="@font/centurybold"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:id="@+id/quit"/>-->
+
+</ScrollView>

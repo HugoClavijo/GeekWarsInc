@@ -11,6 +11,9 @@ public class ResultActivity extends AppCompatActivity {
 
     TextView mGrade, mFinalScore;
     Button mRetryButton;
+    private String mUser, mUserId;
+    int score = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +25,9 @@ public class ResultActivity extends AppCompatActivity {
         mRetryButton = (Button)findViewById(R.id.retry);
 
         Bundle bundle = getIntent().getExtras();
-        int score = bundle.getInt("finalScore");
+        score = bundle.getInt("finalScore");
+        mUser = bundle.getString("userName");
+        mUserId = bundle.getString("userId");
         int minScore = QuestionLibrary.numQuestions - 1;
         int regularScore = QuestionLibrary.numQuestions - 2;
 
@@ -42,8 +47,14 @@ public class ResultActivity extends AppCompatActivity {
         mRetryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ResultActivity.this, Main2Activity.class));
+//                startActivity(new Intent(ResultActivity.this, Main2Activity.class));
+//                ResultActivity.this.finish();
+                Intent i = new Intent(ResultActivity.this, RankingActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putInt("userScore", score);
+                i.putExtras(bundle);
                 ResultActivity.this.finish();
+                startActivity(i);
             }
         });
 
