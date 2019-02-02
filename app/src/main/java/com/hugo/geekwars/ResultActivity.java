@@ -15,7 +15,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -68,11 +67,6 @@ public class ResultActivity extends AppCompatActivity {
         mRetryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                startActivity(new Intent(ResultActivity.this, Main2Activity.class));
-//                ResultActivity.this.finish();
-//                String name = mUser;
-//                String id = mUserId;
-//                int mScore = score;
 
                 if(whenIsCreated == 0){
                     cargarDatosFirebase(mUser, mUserId, score);

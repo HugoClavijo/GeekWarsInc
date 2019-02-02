@@ -96,21 +96,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
-//        Button mButton = (Button) findViewById(R.id.btSignIn);
-//        mButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                startActivity(new Intent(MainActivity.this, Main2Activity.class));
-//            }
-//        });
-
-        //Button fbutton = findViewById(R.id.button1);
-        // fbutton.setOnClickListener(new View.OnClickListener(){
-        // @Override
-        // public void onClick(View v){
-        //   goToFacebookPage("257028575158979");
-        // }
-        // });
     }
 
     @Override
@@ -178,16 +163,5 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             firebaseAuth.removeAuthStateListener(firebaseAuthListener);
         }
     }
-    // public void goToFacebookPage(String id){
-    //  try {
-    // Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://page/" + id));
-    //startActivity(intent);
 
-    //} catch (ActivityNotFoundException e){
-
-    //Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/" + id));
-    // startActivity(intent);
-
-    //}
-    //}
 }

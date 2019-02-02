@@ -83,7 +83,6 @@ public class Main2Activity extends AppCompatActivity implements SensorEventListe
                 bundle.putString("userName", mUser);
                 bundle.putString("userId", mUserId);
                 i.putExtras(bundle);
-                //Main2Activity.this.finish();
                 startActivity(i);
             }
         });
@@ -135,14 +134,6 @@ public class Main2Activity extends AppCompatActivity implements SensorEventListe
         } else {
             //iv.setImageResource(R.drawable.far);
         }
-
-//        float distance = event.values[0];
-//        Toast.makeText(this, "proximity "+mSensor.getMaximumRange(),Toast.LENGTH_LONG).show();
-//        if(distance > 10){
-//            Toast.makeText(Main2Activity.this, "Free GeekCoin", Toast.LENGTH_SHORT).show();
-//        }else{
-//            //sensorLayout.setBackgroundResource(R.drawable.sensor_background_two);
-//        }
 
     }
 
