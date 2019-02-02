@@ -59,11 +59,11 @@ public class GameActivity extends AppCompatActivity {
         private int mScore = 0;
         private int mQuestionNumber = 0;
 
-        private String questionsRef [] = new String[4];
+        private String questionsRef [];
 
-        private String choicesRef [][] = new String[4][3];
+        private String choicesRef [][];
 
-        private String answersRef []= new String[4];
+        private String answersRef [];
 
         private String mUser, mUserId;
 
@@ -136,14 +136,18 @@ public class GameActivity extends AppCompatActivity {
                 pd.dismiss();
             }
 
-            questionsRef = new String[4];
-            answersRef= new String[4];
+
+
 
             try
             {
 
                 JSONArray jsonArray = new JSONArray(result);
                 int length = jsonArray.length();
+
+                questionsRef = new String[length];
+                answersRef= new String[length];
+                choicesRef = new String[length][3];
 
                 for (int i = 0; i < length; i++)
                 {

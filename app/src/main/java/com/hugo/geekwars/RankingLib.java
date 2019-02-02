@@ -1,8 +1,8 @@
 package com.hugo.geekwars;
 
 public class RankingLib {
-    private String username;
-    private String id;
+    private String userName;
+    private String userId;
     private int score;
 
 
@@ -11,8 +11,34 @@ public class RankingLib {
     }
 
     public RankingLib(String username, String userId, Integer userScore) {
-        this.username = username;
-        this.id = userId;
+        this.userName = username;
+        this.userId = userId;
         this.score = userScore;
     }
+
+
+    public String getUsername() {
+        return userName;
+    }
+
+    public void setUsername(String name) {
+        this.userName = name;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public Integer getScore() {
+        return score;
+    }
+
+    public void setScore(int userScore) {
+        this.score = userScore;
+    }
+
 }
