@@ -32,13 +32,28 @@ public class RankingActivity extends AppCompatActivity {
 
     ProgressDialog pd;
 
+    private static String TAG = "RankingActivity";
+    static boolean isInitialized = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ranking);
 
+        try{
+            if(!isInitialized){
+                FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+                isInitialized = true;
+            }else {
+                Log.d(TAG,"Already Initialized");
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
         mRootReference = FirebaseDatabase.getInstance().getReference();
+        //mRootReference.keepSynced(true);
+
 
         mButtonExit = (Button)findViewById(R.id.quit);
         mTop1 = (TextView)findViewById(R.id.top1);

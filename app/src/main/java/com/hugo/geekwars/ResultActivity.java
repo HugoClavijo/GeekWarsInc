@@ -27,14 +27,27 @@ public class ResultActivity extends AppCompatActivity {
     int whenIsCreated;
     int score = 0;
 
-
+    private static String TAG = "ResultActivity";
+    static boolean isInitialized = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
+        try{
+            if(!isInitialized){
+                FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+                isInitialized = true;
+            }else {
+                Log.d(TAG,"Already Initialized");
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
         mRootReference = FirebaseDatabase.getInstance().getReference();
+        //mRootReference.keepSynced(true);
 
         mGrade = (TextView)findViewById(R.id.grade);
         mFinalScore = (TextView)findViewById(R.id.outOf);

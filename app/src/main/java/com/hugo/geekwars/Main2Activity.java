@@ -62,7 +62,7 @@ public class Main2Activity extends AppCompatActivity implements SensorEventListe
 
         mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
-        float maxRange = mSensor.getMaximumRange();
+        //float maxRange = mSensor.getMaximumRange();
 
         Button mButton = (Button) findViewById(R.id.b5);
         mButton.setOnClickListener(new View.OnClickListener() {
@@ -128,7 +128,7 @@ public class Main2Activity extends AppCompatActivity implements SensorEventListe
 //            //iv.setImageResource(R.drawable.far);
 //        }
 
-        if (mSensor.getMaximumRange() == event.values[0]) {
+        if (event.values[0] == 2) {
             //iv.setImageResource(R.drawable.near);
             Toast.makeText(Main2Activity.this, "Free Add", Toast.LENGTH_SHORT).show();
         } else {

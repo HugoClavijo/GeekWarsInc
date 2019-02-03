@@ -1,6 +1,9 @@
 package com.hugo.geekwars;
 
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -47,8 +50,14 @@ public class GameActivity extends AppCompatActivity {
         mButtonChoice3 = (Button)findViewById(R.id.choice3);
         mButtonExit = (Button)findViewById(R.id.quit);
 
-        new JsonTask().execute("https://geekwars-d935a.firebaseio.com/quiz/.json");
-
+        if (checkConnectivity()){
+            //do something
+            new JsonTask().execute("https://geekwars-d935a.firebaseio.com/quiz/.json");
+        }else{
+            startActivity(new Intent(GameActivity.this, Main2Activity.class));
+            GameActivity.this.finish();
+        }
+        
     }
 
     private class JsonTask extends AsyncTask<String, String, String> {
@@ -135,9 +144,6 @@ public class GameActivity extends AppCompatActivity {
             if (pd.isShowing()){
                 pd.dismiss();
             }
-
-
-
 
             try
             {
@@ -294,7 +300,21 @@ public class GameActivity extends AppCompatActivity {
 
     }
 
+    private boolean checkConnectivity() {
+        boolean enabled = true;
 
+        ConnectivityManager connectivityManager = (ConnectivityManager) this.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo info = connectivityManager.getActiveNetworkInfo();
+
+        if ((info == null || !info.isConnected() || !info.isAvailable())) {
+            Toast.makeText(getApplicationContext(), "Sin conexión a Internet...", Toast.LENGTH_SHORT).show();
+            return false;
+        } else {
+            return true;
+        }
+
+        //return false;
+    }
 
 
 
