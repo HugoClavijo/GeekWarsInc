@@ -15,7 +15,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class ResultActivity extends AppCompatActivity {
@@ -81,9 +83,9 @@ public class ResultActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if(whenIsCreated == 0){
-                    cargarDatosFirebase(mUser, mUserId, score);
-                }
+//                if(whenIsCreated == 0){
+//                    cargarDatosFirebase(mUser, mUserId, score);
+//                }
 
                 Intent i = new Intent(ResultActivity.this, RankingActivity.class);
                 Bundle bundle = new Bundle();
@@ -104,34 +106,21 @@ public class ResultActivity extends AppCompatActivity {
 
                 for(final DataSnapshot snapshot : dataSnapshot.getChildren()){
 
-                    mRootReference.child("scores").child(snapshot.getKey()).addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(DataSnapshot dataSnapshot) {
-                            RankingLib score = snapshot.getValue(RankingLib.class);
-                            String nombre = score.getUsername();
-                            String id = score.getUserId();
-                            int userScore = score.getScore();
+                    RankingLib scores = snapshot.getValue(RankingLib.class);
+                    String nombre = scores.getUsername();
+                    String id = scores.getUserId();
+                    int userScore = scores.getScore();
 
-                            if(id.equals(mUserId) || id.equals("") || id.equals(null)){
-                                whenIsCreated = 1;
-                            }else{
-                                whenIsCreated = 0;
-                            }
+                    if(id.equals(mUserId) || id.equals("") || id.equals(null)){
+                        whenIsCreated = 1;
+                    }else{
+                        whenIsCreated = 0;
+                    }
 
-                            Log.e("NombreUsuario:",""+nombre);
-                            Log.e("IdUsuario:",""+id);
-                            Log.e("ScoreUsuario:",""+userScore);
-                            Log.e("Datos:",""+snapshot.getValue());
-                        }
+                }
 
-                        @Override
-                        public void onCancelled(DatabaseError databaseError) {
-
-                        }
-                    });
-
-
-
+                if(whenIsCreated == 0){
+                    cargarDatosFirebase(mUser, mUserId, score);
                 }
 
             }

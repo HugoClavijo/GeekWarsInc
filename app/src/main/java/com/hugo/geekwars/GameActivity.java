@@ -57,7 +57,7 @@ public class GameActivity extends AppCompatActivity {
             startActivity(new Intent(GameActivity.this, Main2Activity.class));
             GameActivity.this.finish();
         }
-        
+
     }
 
     private class JsonTask extends AsyncTask<String, String, String> {
@@ -111,10 +111,10 @@ public class GameActivity extends AppCompatActivity {
                 while ((line = reader.readLine()) != null) {
                     buffer.append(line+"\n");
                     Log.d("Response: ", "> " + line);   //here u ll get whole response...... :-)
-
                 }
 
                 return buffer.toString();
+
 
 
 
@@ -145,6 +145,7 @@ public class GameActivity extends AppCompatActivity {
                 pd.dismiss();
             }
 
+
             try
             {
 
@@ -170,7 +171,6 @@ public class GameActivity extends AppCompatActivity {
             {
                 // this is just an example
             }
-
 
 
             mAnswer = answersRef[mQuestionNumber];
@@ -315,7 +315,5 @@ public class GameActivity extends AppCompatActivity {
 
         //return false;
     }
-
-
 
 }

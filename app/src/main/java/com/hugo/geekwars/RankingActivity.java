@@ -32,13 +32,17 @@ public class RankingActivity extends AppCompatActivity {
 
     ProgressDialog pd;
 
-    private static String TAG = "RankingActivity";
+    private static String TAG = "BaseActivity";
+
     static boolean isInitialized = false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ranking);
+
+        //FirebaseDatabase.getInstance().setPersistenceEnabled(true);
 
         try{
             if(!isInitialized){
