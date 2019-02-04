@@ -26,7 +26,6 @@ public class ResultActivity extends AppCompatActivity {
     TextView mGrade, mFinalScore;
     Button mRetryButton;
     private String mUser, mUserId;
-    int whenIsCreated;
     int score = 0;
 
     private static String TAG = "ResultActivity";
@@ -49,7 +48,7 @@ public class ResultActivity extends AppCompatActivity {
         }
 
         mRootReference = FirebaseDatabase.getInstance().getReference();
-        //mRootReference.keepSynced(true);
+        mRootReference.keepSynced(true);
 
         mGrade = (TextView)findViewById(R.id.grade);
         mFinalScore = (TextView)findViewById(R.id.outOf);
@@ -100,23 +99,43 @@ public class ResultActivity extends AppCompatActivity {
 
 
     private void solicitarDatosFirebase() {
-        mRootReference.child("scores").addValueEventListener(new ValueEventListener() {
+        mRootReference.child("scores").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
+                int whenIsCreated = 0;
+
+                List<Integer> scores = new ArrayList<Integer>();
+                List<String> userNames = new ArrayList<String>();
+                List<String> userIds = new ArrayList<String>();
+
                 for(final DataSnapshot snapshot : dataSnapshot.getChildren()){
 
-                    RankingLib scores = snapshot.getValue(RankingLib.class);
-                    String nombre = scores.getUsername();
-                    String id = scores.getUserId();
-                    int userScore = scores.getScore();
+                    RankingLib score = snapshot.getValue(RankingLib.class);
+                    String nombre = score.getUsername();
+                    String id = score.getUserId();
+                    int userScore = score.getScore();
+                    scores.add(userScore);
+                    userNames.add(nombre);
+                    userIds.add(id);
+//                    if(id.equals(mUserId) || id.equals("") || id.equals(null)){
+//                        whenIsCreated = 1;
+//                    }else{
+//                        whenIsCreated = 0;
+//                    }
 
-                    if(id.equals(mUserId) || id.equals("") || id.equals(null)){
+                }
+                //Log.e("scores:",""+userIds.get(0));
+//                if(whenIsCreated == 0){
+//                    cargarDatosFirebase(mUser, mUserId, score);
+//                }
+
+
+                for (int j = 0; j < userIds.size(); j++){
+                    if(userIds.get(j).equals(mUserId) || userIds.get(j).equals(null)){
                         whenIsCreated = 1;
-                    }else{
-                        whenIsCreated = 0;
+                       // j = userIds.size();
                     }
-
                 }
 
                 if(whenIsCreated == 0){

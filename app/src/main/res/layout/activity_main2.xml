@@ -39,9 +39,8 @@
                 android:drawableTop="@drawable/play"
                 android:paddingTop="25dp"
                 android:textAllCaps="false"
-                android:textColor="#2f2e2e"
-                android:textSize="18sp"
-                />
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp" />
 
 
             <Button

@@ -110,6 +110,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_above="@+id/progressBar"
+            android:paddingTop="25dp"
             android:layout_centerVertical="true" />
 
         <ProgressBar

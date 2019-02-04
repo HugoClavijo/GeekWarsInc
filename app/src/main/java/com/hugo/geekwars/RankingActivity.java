@@ -32,7 +32,7 @@ public class RankingActivity extends AppCompatActivity {
 
     ProgressDialog pd;
 
-    private static String TAG = "BaseActivity";
+    private static String TAG = "RankingActivity";
 
     static boolean isInitialized = false;
 
@@ -56,7 +56,7 @@ public class RankingActivity extends AppCompatActivity {
         }
 
         mRootReference = FirebaseDatabase.getInstance().getReference();
-        //mRootReference.keepSynced(true);
+        mRootReference.keepSynced(true);
 
 
         mButtonExit = (Button)findViewById(R.id.quit);
@@ -73,7 +73,7 @@ public class RankingActivity extends AppCompatActivity {
         });
 
         pd = new ProgressDialog(RankingActivity.this);
-        pd.setMessage("Please wait");
+        pd.setMessage("Loading...");
         pd.setCancelable(false);
         pd.show();
 

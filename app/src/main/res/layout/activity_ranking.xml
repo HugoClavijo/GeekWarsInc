@@ -21,7 +21,7 @@
             android:fontFamily="@font/centurybold"
             android:layout_margin="16dp"
             android:id="@+id/grade"
-            android:text="Top Scores"/>
+            android:text="@string/topScores"/>
 
         <TextView
             android:layout_below="@+id/grade"
@@ -68,7 +68,7 @@
             android:layout_below="@+id/top3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Salir"
+            android:text="@string/exit"
             android:padding="10dp"
             android:layout_margin="16dp"
             android:textColor="#fff"

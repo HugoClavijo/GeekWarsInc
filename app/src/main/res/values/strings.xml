@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">GeekWars</string>
     <string name="in">Log In</string>
@@ -21,4 +22,9 @@
     <string name="not_close_session">No se pudo cerrar sesión</string>
     <string name="not_revoke">No se pudo revocar el acceso</string>
     <string name="not_firebase_auth">No se pudo autenticar con Firebase</string>
+    <string name="scoreTxt">Score</string>
+    <string name="exit">Exit</string>
+    <string name="topScores">Top Scores</string>
+    <string name="noNetwork">No internet connection...</string>
+    <string name="wait">Please wait</string>
 </resources>

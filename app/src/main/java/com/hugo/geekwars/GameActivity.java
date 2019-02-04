@@ -80,7 +80,7 @@ public class GameActivity extends AppCompatActivity {
             super.onPreExecute();
 
             pd = new ProgressDialog(GameActivity.this);
-            pd.setMessage("Please wait");
+            pd.setMessage("Loading...");
             pd.setCancelable(false);
             pd.show();
 
@@ -189,10 +189,10 @@ public class GameActivity extends AppCompatActivity {
                         updateScore(mScore);
                         updateQuestion();
                         //This line of code is optiona
-                        Toast.makeText(GameActivity.this, "correcto", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(GameActivity.this, R.string.correct, Toast.LENGTH_SHORT).show();
 
                     }else {
-                        Toast.makeText(GameActivity.this, "incorrecto", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(GameActivity.this, R.string.wrongans, Toast.LENGTH_SHORT).show();
                         //updateQuestion();
                         validateQuestions();
                     }
@@ -212,10 +212,10 @@ public class GameActivity extends AppCompatActivity {
                         updateScore(mScore);
                         updateQuestion();
                         //This line of code is optiona
-                        Toast.makeText(GameActivity.this, "correcto", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(GameActivity.this, R.string.correct, Toast.LENGTH_SHORT).show();
 
                     }else {
-                        Toast.makeText(GameActivity.this, "incorrecto", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(GameActivity.this, R.string.wrongans, Toast.LENGTH_SHORT).show();
                         //updateQuestion();
                         validateQuestions();
                     }
@@ -237,10 +237,10 @@ public class GameActivity extends AppCompatActivity {
                         validateQuestions();
                         //updateQuestion();
                         //This line of code is optiona
-                        Toast.makeText(GameActivity.this, "correcto", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(GameActivity.this, R.string.correct, Toast.LENGTH_SHORT).show();
 
                     }else {
-                        Toast.makeText(GameActivity.this, "incorrecto", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(GameActivity.this, R.string.wrongans, Toast.LENGTH_SHORT).show();
                         //updateQuestion();
                         validateQuestions();
                     }
@@ -307,7 +307,7 @@ public class GameActivity extends AppCompatActivity {
         NetworkInfo info = connectivityManager.getActiveNetworkInfo();
 
         if ((info == null || !info.isConnected() || !info.isAvailable())) {
-            Toast.makeText(getApplicationContext(), "Sin conexión a Internet...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), R.string.noNetwork, Toast.LENGTH_SHORT).show();
             return false;
         } else {
             return true;

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GeekWars</string>
+    <string name="in">Log In</string>
+    <string name="out">Sign Out</string>
+    <string name="reg">Registrar</string>
+    <string name="mail">Email</string>
+    <string name="pass">Contraseña</string>
+    <string name="question">Pregunta</string>
+    <string name="play_again">Jugar de nuevo</string>
+    <string name="time">15</string>
+    <string name="correct">Correcto</string>
+    <string name="wrongans">Incorrecto</string>
+    <string name="timeup">Tiempo Acabado</string>
+    <string name="play_game">Jugar</string>
+    <string name="quit">Salir</string>
+    <string name="next">Siguiente</string>
+    <string name="cancel">✖</string>
+    <string name="not_log_in">No se pudo iniciar sesión</string>
+    <string name="log_out">Log Out</string>
+    <string name="revoke">Revocar</string>
+    <string name="not_firebase_auth">No se pudo autenticar con Firebase</string>
+    <string name="not_close_session">No se pudo cerrar sesión</string>
+    <string name="not_revoke">No se pudo revocar el acceso</string>
+    <string name="scoreTxt">Aciertos</string>
+    <string name="exit">Salir</string>
+    <string name="topScores">Top 3</string>
+    <string name="noNetwork">Sin conexión a Internet...</string>
+    <string name="wait">Cargando...</string>
+</resources>

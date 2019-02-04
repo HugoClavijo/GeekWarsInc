@@ -20,10 +20,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 
-public class Main2Activity extends AppCompatActivity implements SensorEventListener, GoogleApiClient.OnConnectionFailedListener  {
+public class Main2Activity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
 
-    private SensorManager mSensorManager;
-    private Sensor mSensor;
+//    private SensorManager mSensorManager;
+//    private Sensor mSensor;
     private String mUser, mUserId;
 
     private GoogleApiClient googleApiClient;
@@ -60,8 +60,8 @@ public class Main2Activity extends AppCompatActivity implements SensorEventListe
         };
         //---------------------------------------------------------------
 
-        mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
-        mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
+//        mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+//        mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
         //float maxRange = mSensor.getMaximumRange();
 
         Button mButton = (Button) findViewById(R.id.b5);
@@ -106,36 +106,36 @@ public class Main2Activity extends AppCompatActivity implements SensorEventListe
         });
     }
 
-    protected void onResume() {
-        super.onResume();
-        mSensorManager.registerListener(this, mSensor,
-                SensorManager.SENSOR_DELAY_NORMAL);
-    }
+//    protected void onResume() {
+//        super.onResume();
+//        mSensorManager.registerListener(this, mSensor,
+//                SensorManager.SENSOR_DELAY_NORMAL);
+//    }
 
-    protected void onPause() {
-        super.onPause();
-        mSensorManager.unregisterListener(this);
-    }
+//    protected void onPause() {
+//        super.onPause();
+//        mSensorManager.unregisterListener(this);
+//    }
 
-    public void onAccuracyChanged(Sensor sensor, int accuracy) {
-    }
+//    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+//    }
 
-    public void onSensorChanged(SensorEvent event) {
-//        if (mSensor.getMaximumRange() == event.values[0]) {
+//    public void onSensorChanged(SensorEvent event) {
+////        if (mSensor.getMaximumRange() == event.values[0]) {
+////            //iv.setImageResource(R.drawable.near);
+////            Toast.makeText(Main2Activity.this, "Free Add", Toast.LENGTH_SHORT).show();
+////        } else {
+////            //iv.setImageResource(R.drawable.far);
+////        }
+//
+//        if (event.values[0] == 2) {
 //            //iv.setImageResource(R.drawable.near);
 //            Toast.makeText(Main2Activity.this, "Free Add", Toast.LENGTH_SHORT).show();
 //        } else {
 //            //iv.setImageResource(R.drawable.far);
 //        }
-
-        if (event.values[0] == 2) {
-            //iv.setImageResource(R.drawable.near);
-            Toast.makeText(Main2Activity.this, "Free Add", Toast.LENGTH_SHORT).show();
-        } else {
-            //iv.setImageResource(R.drawable.far);
-        }
-
-    }
+//
+//    }
 
 
     //Google User Data-------------------------------------
