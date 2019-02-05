@@ -69,6 +69,7 @@ public class Main2Activity extends AppCompatActivity implements GoogleApiClient.
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Main2Activity.this, AboutActivity.class));
+                Main2Activity.this.finish();
             }
         });
 
@@ -84,6 +85,7 @@ public class Main2Activity extends AppCompatActivity implements GoogleApiClient.
                 bundle.putString("userId", mUserId);
                 i.putExtras(bundle);
                 startActivity(i);
+                Main2Activity.this.finish();
             }
         });
 
@@ -93,6 +95,7 @@ public class Main2Activity extends AppCompatActivity implements GoogleApiClient.
             public void onClick(View view) {
                 //Toast.makeText(Main2Activity.this, "No Service", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(Main2Activity.this, RankingActivity.class));
+                Main2Activity.this.finish();
             }
         });
 
@@ -102,6 +105,7 @@ public class Main2Activity extends AppCompatActivity implements GoogleApiClient.
             public void onClick(View view) {
                 //Toast.makeText(Main2Activity.this, "No Service", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(Main2Activity.this, ProfileActivity.class));
+                Main2Activity.this.finish();
             }
         });
     }
