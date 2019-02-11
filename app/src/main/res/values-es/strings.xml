@@ -27,4 +27,8 @@
     <string name="topScores">Top 3</string>
     <string name="noNetwork">Sin conexión a Internet...</string>
     <string name="wait">Cargando...</string>
+    <string name="visit">Visítanos</string>
+    <string name="welcome1">Bienvenido a Geek Wars</string>
+    <string name="welcome2">Alcanza el primer lugar en el Top con la mayor cantidad de aciertos en el primer intento y gana increíbles premios.</string>
+    <string name="about">Aplicación desarrollada para el Bar Restaurante Geekdom. Alcanza la mayor cantidad de aciertos en las trivias en el primer intento y gana la batalla en el mundo Geek.</string>
 </resources>

@@ -10,7 +10,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="10dp"
+        android:paddingTop="0dp"
+        android:gravity="center"
         android:orientation="vertical">
 
         <ImageView
@@ -23,6 +24,8 @@
             android:layout_centerHorizontal="true"
             app:srcCompat="@drawable/wall" />
 
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -31,8 +34,8 @@
             <Button
                 android:id="@+id/b1"
                 android:layout_width="0dp"
-                android:layout_height="200dp"
-                android:layout_margin="2dp"
+                android:layout_height="170dp"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:background="@color/colorDarkGreen"
                 android:foreground="?attr/selectableItemBackground"
@@ -46,8 +49,8 @@
             <Button
                 android:id="@+id/b2"
                 android:layout_width="0dp"
-                android:layout_height="200dp"
-                android:layout_margin="2dp"
+                android:layout_height="170dp"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:background="@color/colorDarkGreen"
                 android:foreground="?attr/selectableItemBackground"
@@ -66,8 +69,8 @@
             <Button
                 android:id="@+id/b4"
                 android:layout_width="0dp"
-                android:layout_height="200dp"
-                android:layout_margin="2dp"
+                android:layout_height="170dp"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:background="@color/colorDarkGreen"
                 android:drawableTop="@drawable/profile"
@@ -80,8 +83,8 @@
             <Button
                 android:id="@+id/b5"
                 android:layout_width="0dp"
-                android:layout_height="200dp"
-                android:layout_margin="2dp"
+                android:layout_height="170dp"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:background="@color/colorDarkGreen"
                 android:drawableTop="@drawable/about"

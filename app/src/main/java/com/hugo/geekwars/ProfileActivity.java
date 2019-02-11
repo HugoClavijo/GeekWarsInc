@@ -68,7 +68,12 @@ public class ProfileActivity extends AppCompatActivity implements GoogleApiClien
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ProfileActivity.this, Main2Activity.class));
+//                startActivity(new Intent(ProfileActivity.this, Main2Activity.class));
+//                ProfileActivity.this.finish();
+
+                Intent i = new Intent(ProfileActivity.this, Main2Activity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(i);
                 ProfileActivity.this.finish();
             }
         });

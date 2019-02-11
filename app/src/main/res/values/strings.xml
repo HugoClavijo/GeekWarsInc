@@ -27,4 +27,8 @@
     <string name="topScores">Top Scores</string>
     <string name="noNetwork">No internet connection...</string>
     <string name="wait">Please wait</string>
+    <string name="visit">Social Media</string>
+    <string name="welcome1">Welcome to Geek Wars</string>
+    <string name="welcome2">Reach the top spot in the Top with the most questions on the first try and win incredible prizes.</string>
+    <string name="about">Application developed for the Geekdom Bar Restaurant. Reach the most hits in the trivia on the first try and win the battle in the Geek world.</string>
 </resources>

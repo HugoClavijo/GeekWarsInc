@@ -6,8 +6,8 @@ android {
         applicationId "com.hugo.geekwars"
         minSdkVersion 18
         targetSdkVersion 28
-        versionCode 13
-        versionName "2.8"
+        versionCode 16
+        versionName "3.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

@@ -16,7 +16,6 @@
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:textSize="24sp"
-            android:padding="16dp"
             android:textColor="#fff"
             android:fontFamily="@font/centurybold"
             android:layout_margin="16dp"
@@ -29,7 +28,6 @@
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:textSize="20sp"
-            android:padding="16dp"
             android:textColor="#fff"
             android:layout_margin="16dp"
             android:fontFamily="@font/centurybold"
@@ -42,13 +40,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ranking"
-            android:padding="16dp"
             android:layout_margin="10dp"
             android:textColor="#fff"
             android:background="#4CAF50"
             android:textSize="18sp"
             android:fontFamily="@font/centurybold"
             android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="250dp"
+            android:adjustViewBounds="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/promo" />
 
     </RelativeLayout>
 

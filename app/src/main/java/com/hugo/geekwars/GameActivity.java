@@ -2,9 +2,12 @@ package com.hugo.geekwars;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
+import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -36,6 +39,8 @@ public class GameActivity extends AppCompatActivity {
     private Button mButtonChoice3;
     private Button mButtonExit;
 
+    MediaPlayer mediaplayer;
+
     ProgressDialog pd;
 
     @Override
@@ -49,6 +54,9 @@ public class GameActivity extends AppCompatActivity {
         mButtonChoice2 = (Button)findViewById(R.id.choice2);
         mButtonChoice3 = (Button)findViewById(R.id.choice3);
         mButtonExit = (Button)findViewById(R.id.quit);
+
+        //Inicializamos la clase MediaPlayer asociandole el fichero de Audio
+        mediaplayer = MediaPlayer.create(this, R.raw.coin);
 
         if (checkConnectivity()){
             //do something
@@ -187,13 +195,16 @@ public class GameActivity extends AppCompatActivity {
                     if (mButtonChoice1.getText().equals(mAnswer) ){
                         mScore = mScore + 1;
                         updateScore(mScore);
-                        updateQuestion();
+                        mediaplayer.start();
+                        validateQuestions();
+                        //updateQuestion();
                         //This line of code is optiona
                         Toast.makeText(GameActivity.this, R.string.correct, Toast.LENGTH_SHORT).show();
 
                     }else {
                         Toast.makeText(GameActivity.this, R.string.wrongans, Toast.LENGTH_SHORT).show();
                         //updateQuestion();
+                        temblor();
                         validateQuestions();
                     }
                 }
@@ -210,13 +221,16 @@ public class GameActivity extends AppCompatActivity {
                     if (mButtonChoice2.getText().equals(mAnswer)){
                         mScore = mScore + 1;
                         updateScore(mScore);
-                        updateQuestion();
+                        mediaplayer.start();
+                        validateQuestions();
+                        //updateQuestion();
                         //This line of code is optiona
                         Toast.makeText(GameActivity.this, R.string.correct, Toast.LENGTH_SHORT).show();
 
                     }else {
                         Toast.makeText(GameActivity.this, R.string.wrongans, Toast.LENGTH_SHORT).show();
                         //updateQuestion();
+                        temblor();
                         validateQuestions();
                     }
                 }
@@ -234,6 +248,7 @@ public class GameActivity extends AppCompatActivity {
                     if (mButtonChoice3.getText().equals(mAnswer)){
                         mScore = mScore + 1;
                         updateScore(mScore);
+                        mediaplayer.start();
                         validateQuestions();
                         //updateQuestion();
                         //This line of code is optiona
@@ -242,6 +257,7 @@ public class GameActivity extends AppCompatActivity {
                     }else {
                         Toast.makeText(GameActivity.this, R.string.wrongans, Toast.LENGTH_SHORT).show();
                         //updateQuestion();
+                        temblor();
                         validateQuestions();
                     }
                 }
@@ -253,7 +269,11 @@ public class GameActivity extends AppCompatActivity {
             mButtonExit.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    startActivity(new Intent(GameActivity.this, Main2Activity.class));
+//                    startActivity(new Intent(GameActivity.this, Main2Activity.class));
+//                    GameActivity.this.finish();
+                    Intent i = new Intent(GameActivity.this, Main2Activity.class);
+                    i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(i);
                     GameActivity.this.finish();
                 }
             });
@@ -314,6 +334,11 @@ public class GameActivity extends AppCompatActivity {
         }
 
         //return false;
+    }
+
+    public void temblor(){
+        Vibrator v = (Vibrator)getSystemService(VIBRATOR_SERVICE);
+        v.vibrate(500);
     }
 
 }

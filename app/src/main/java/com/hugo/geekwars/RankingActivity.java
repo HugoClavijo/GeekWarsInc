@@ -67,7 +67,12 @@ public class RankingActivity extends AppCompatActivity {
         mButtonExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(RankingActivity.this, Main2Activity.class));
+//                startActivity(new Intent(RankingActivity.this, Main2Activity.class));
+//                RankingActivity.this.finish();
+
+                Intent i = new Intent(RankingActivity.this, Main2Activity.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(i);
                 RankingActivity.this.finish();
             }
         });

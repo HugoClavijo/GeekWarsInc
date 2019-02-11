@@ -29,20 +29,90 @@
             android:adjustViewBounds="true"
             app:srcCompat="@drawable/logogeekdom" />
 
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+        <TextView
+            android:id="@+id/txtWelcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_above="@+id/txtWelcome2"
+            android:layout_marginBottom="15dp"
             android:adjustViewBounds="true"
-            app:srcCompat="@drawable/hc" />
+            android:fontFamily="@font/centurybold"
+            android:scaleType="fitXY"
+            android:text="@string/welcome1"
+            android:textSize="18sp"
+            android:textColor="@color/white" />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+
+        <TextView
+            android:id="@+id/txtWelcome2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40dp"
             android:adjustViewBounds="true"
-            app:srcCompat="@drawable/nc" />
+            android:scaleType="fitXY"
+            android:fontFamily="@font/centurybold"
+            android:text="@string/about"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="14sp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/txtVisit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:fontFamily="@font/centurybold"
+            android:text="@string/visit"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="12sp"
+            android:textColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnFacebook"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/faceicon" />
+
+        <Button
+            android:id="@+id/btnInstagram"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/instaicon" />
+
+        <!--<ImageView-->
+            <!--android:id="@+id/imageView2"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="fill_parent"-->
+            <!--android:adjustViewBounds="true"-->
+            <!--app:srcCompat="@drawable/hc" />-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/imageView3"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="fill_parent"-->
+            <!--android:adjustViewBounds="true"-->
+            <!--app:srcCompat="@drawable/nc" />-->
+    </LinearLayout>
 
     </LinearLayout>
 

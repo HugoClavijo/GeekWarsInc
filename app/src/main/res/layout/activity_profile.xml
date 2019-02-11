@@ -16,6 +16,7 @@
         android:background="@color/black"
         android:drawableRight="@drawable/ic_close_black_44dp"
         android:layout_marginTop="10dp"
+        android:fontFamily="@font/centurybold"
         android:textColor="@color/white" />
 
     <LinearLayout
@@ -38,6 +39,7 @@
             android:layout_height="wrap_content"
             android:text="@string/app_name"
             android:textColor="#ffffff"
+            android:fontFamily="@font/centurybold"
             android:textSize="24sp" />
 
         <TextView
@@ -46,6 +48,7 @@
             android:layout_height="wrap_content"
             android:text="@string/app_name"
             android:textColor="#ffffff"
+            android:fontFamily="@font/centurybold"
             android:textSize="16sp" />
 
         <!--<TextView-->
